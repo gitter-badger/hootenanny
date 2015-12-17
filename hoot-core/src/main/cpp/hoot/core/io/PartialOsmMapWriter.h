@@ -78,8 +78,9 @@ public:
   virtual void writePartial(const shared_ptr<const Relation>& r) = 0;
   void writePartial(const shared_ptr<Relation>& r);
 
-  virtual void writeElement(ElementInputStream& in) { writePartial(in.readNextElement()); }
+  virtual void writeElement(ElementInputStream& in) { writeElement(in.readNextElement()); }
 
+  virtual void writeElement(const ElementPtr& element) { writePartial(element); }
 };
 
 }

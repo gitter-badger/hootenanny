@@ -148,7 +148,7 @@ public:
   // Functions for ElementOutputStream
   virtual void writeElement(ElementInputStream& inputStream) = 0;
 
-
+  virtual void writeElement(const ElementPtr& element) = 0;
 
   // Functions from ElementProvider
 

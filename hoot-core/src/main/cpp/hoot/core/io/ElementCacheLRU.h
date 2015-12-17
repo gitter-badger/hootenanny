@@ -100,6 +100,8 @@ public:
   // Functions for ElementOutputStream
   virtual void writeElement(ElementInputStream& inputStream);
 
+  virtual void writeElement(const ElementPtr& element);
+
   // Functions for ElementProvider
 
   virtual boost::shared_ptr<OGRSpatialReference> getProjection() const;

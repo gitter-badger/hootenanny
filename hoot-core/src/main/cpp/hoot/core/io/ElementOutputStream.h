@@ -55,6 +55,8 @@ public:
    */
   virtual void writeElement(ElementInputStream& inputStream) = 0;
 
+  virtual void writeElement(const ElementPtr& element) = 0;
+
   /**
    * Read elements from the input stream and write to the output stream. There may be a better place
    * for this to live, but it works for now.

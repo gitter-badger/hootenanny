@@ -245,8 +245,13 @@ void ElementCacheLRU::writeElement(ElementInputStream& inputStream)
       return;
     }
   }
-  ConstElementPtr newElement = inputStream.readNextElement();
-  addElement(newElement);
+  writeElement(inputStream.readNextElement());
+}
+
+void ElementCacheLRU::writeElement(const ElementPtr &element)
+{
+  ConstElementPtr c(element);
+  addElement(c);
 }
 
 /*
